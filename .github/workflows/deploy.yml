@@ -42,7 +42,7 @@ jobs:
 
 
       - name: Run Tests
-        run: yarn vitest
+        run: cd secretsanta && yarn vitest
 
       - name: Build
         run: yarn vite build
