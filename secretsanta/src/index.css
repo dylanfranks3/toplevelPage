@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url(../static/snow.png), url(../static/snow.png), #fefae8 url(../static/cats.png) bottom left no-repeat;
+  background-repeat: repeat, repeat, no-repeat;
+  background-size: auto auto, auto auto, contain;
+  background-attachment: fixed, fixed, fixed;
+  animation-name: snow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-family: 'Comic Sans MS';
+}
+
+.bg-postcard {
+  background: repeating-linear-gradient(
+    45deg,
+    #5CC48A,
+    #5CC48A 30px,
+    #FFFFFF 30px,
+    #FFFFFF 60px,
+    #EF3D3D 60px,
+    #EF3D3D 90px,
+    #FFFFFF 90px,
+    #FFFFFF 120px
+  );
+}
+
+.bg-postcard-nowhite {
+  background: repeating-linear-gradient(
+    45deg,
+    #5CC48A,
+    #5CC48A 30px,
+    #EF3D3D 30px,
+    #EF3D3D 60px
+  );
+}
+
+.flex-0 {
+  flex: 0 1 0%;
+}
+
+.postcard > div {
+  @apply bg-white;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 130px 40px, 0 0, 0 0;
+  }
+  100% {
+    background-position: 130px 640px, 0 300px, 0 0
+  }
+}
